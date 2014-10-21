@@ -17,14 +17,28 @@
   <xsl:template match="*" mode="generate-header">
     <xsl:param name="documentation-title" as="xs:string" select="''" tunnel="yes" />
     <div class="contain-to-grid sticky">
-      <nav class="top-bar" data-topbar="">
+      <!-- tobar and menu for medium and large -->
+      <nav class="top-bar hide-for-small" data-topbar="">
         <ul class="title-area">
           <li class="name">
             <h1><a href="#"><xsl:value-of select="$documentation-title"/></a></h1>
           </li>
-          <!--li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li-->
         </ul>
       </nav>
+      <!-- mobile topbar and menu -->
+      <nav class="tab-bar show-for-small">
+        <a class="left-off-canvas-toggle menu-icon">
+          <span><xsl:value-of select="$documentation-title"/></span>
+        </a>
+      </nav>
+
+      <aside class="marketing-left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <!-- mobile navagation menu here -->
+        </ul>
+      </aside>
+
+      <a class="exit-off-canvas" href="#"></a>
     </div>
   </xsl:template>
 
@@ -64,6 +78,7 @@
     <xsl:param name="collected-data" as="element()" tunnel="yes"/>
     <xsl:param name="documentation-title" tunnel="yes" />
 
+  <div class="hide-for-small">
     <div class="sidebar">
 
       <nav aria-label="Main navigation">
@@ -85,6 +100,7 @@
         </xsl:if>
       </nav>
     </div>
+  </div>
   </xsl:template>
 
 </xsl:stylesheet>
