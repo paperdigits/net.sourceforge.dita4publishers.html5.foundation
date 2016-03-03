@@ -37,7 +37,7 @@
     </attributes>
     <value></value>
     <source>
-      <file path="html5-foundation/css/normalize.css" />
+      <!--file path="html5-foundation/css/normalize.css" /-->
       <file path="html5-foundation/css/foundation.css" />
       <file path="html5-foundation/css/app.css" />
     </source>
@@ -82,9 +82,11 @@
     </attributes>
     <value></value>
     <source>
-      <file path="html5-foundation/js/jquery.js" />
+      <file path="html5-foundation/js/vendor/jquery.min.js" />
+	  <file path="html5-foundation/js/vendor/what-input.min.js" />
       <!--file path="themes/html5-foundation/js/modernizr.js" /-->
       <file path="html5-foundation/js/foundation.min.js" />
+	  <file path="html5-foundation/js/app.js" />
 
     </source>
   </tag>
