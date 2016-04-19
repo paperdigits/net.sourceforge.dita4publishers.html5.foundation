@@ -36,7 +36,7 @@
 
       <section role="main">
         <div class="row">
-          <div class="large-3 medium-4 columns">
+          <div class="large-3 medium-4 hide-for-small-only columns">
               <xsl:choose>
                 <xsl:when test="$is-root">
                   <xsl:sequence select="$navigation"/>
@@ -52,7 +52,7 @@
               </xsl:choose>
            </div>
 
-           <div class="large-9 medium-8 columns">
+           <div class="large-9 medium-8 small-12 columns">
              <xsl:apply-templates select="." mode="generate-main-content"/>
            </div>
         </div>
